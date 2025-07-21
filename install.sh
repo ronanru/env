@@ -96,7 +96,7 @@ cp ./config/config.fish ~/.config/fish
 fish -c "yes | fish_config theme save \"Catppuccin Mocha\""
 
 cp ./config/krunnerrc ~/.config
-cp ./config/mimemaps.list ~/.config
+cp ./config/mimeaaps.list ~/.config
 
 mkdir -p ~/dev/work
 mkdir -p ~/dev/sandbox
