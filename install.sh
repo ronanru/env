@@ -11,7 +11,7 @@ rpm-ostree install ghostty
 
 brew install tmux neovim gh starship ripgrep eza bat tailscale jq node fastfetch ffmpeg yt-dlp tokei fish btop fzf lazygit difftastic tlrc static-web-server oven-sh/bun/bun sst/tap/opencode
 
-flatpak install -y --noninteractive flathub com.obsproject.Studio org.chromium.Chromium org.libreoffice.LibreOffice io.mpv.Mpv com.google.AndroidStudio org.qbittorrent.qBittorrent org.signal.Signal
+flatpak install -y --noninteractive flathub com.obsproject.Studio org.chromium.Chromium org.libreoffice.LibreOffice io.mpv.Mpv com.google.AndroidStudio org.qbittorrent.qBittorrent org.signal.Signal com.system76.Popsicle
 
 kwriteconfig6 --file kglobalshortcutsrc --group plasmashell --key "activate task manager entry 1" "none,,Activate Task Manager Entry 1"
 kwriteconfig6 --file kglobalshortcutsrc --group plasmashell --key "activate task manager entry 2" "none,,Activate Task Manager Entry 2"
