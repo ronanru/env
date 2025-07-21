@@ -1,0 +1,9 @@
+[Added Associations]
+application/pdf=org.kde.okular-pdf.desktop;
+x-scheme-handler/http=org.chromium.Chromium.desktop;
+x-scheme-handler/https=org.chromium.Chromium.desktop;
+
+[Default Applications]
+application/pdf=org.kde.okular-pdf.desktop;
+x-scheme-handler/http=org.chromium.Chromium.desktop;
+x-scheme-handler/https=org.chromium.Chromium.desktop;

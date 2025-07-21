@@ -1,0 +1,11 @@
+[user]
+  name = "Matvey"
+  email = "35634442+ronanru@users.noreply.github.com"
+[pull]
+  merge = true
+[init]
+  defaultBranch = main
+[diff]
+  external = difft
+[includeIf "gitdir:~/dev/work/"]
+  path = "~/.config/git/config.work"
