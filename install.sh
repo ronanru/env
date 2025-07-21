@@ -55,9 +55,9 @@ kwriteconfig6 --file kglobalshortcutsrc --group services --group org.kde.spectac
 kwriteconfig6 --file kglobalshortcutsrc --group org_kde_powerdevil --key "powerProfile" "Battery,Battery\tMeta+B,Switch Power Profile"
 kwriteconfig6 --file kglobalshortcutsrc --group services --group org.chromium.Chromium.desktop --key "_launch" "Meta+B"
 
-kwriteconfig6 --file kglobalshortcutsrc --group plasmashell --key "activate application launcher" "Shift+Meta\tAlt+F1,Shift+Meta\tAlt+F1,Activate Application Launcher"
+kwriteconfig6 --file kglobalshortcutsrc --group plasmashell --key "activate application launcher" "none,,Activate Application Launcher"
+kwriteconfig6 --file kglobalshortcutsrc --group kwin --key "Overview" "Meta+W\tMeta,Meta+W,Toggle Overview"
 
-kwriteconfig6 --file kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,,invokeShortcut,Overview"
 kwriteconfig6 --file kwinrc --group Plugins --key "slideEnabled" "false"
 kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key "ButtonsOnLeft" ""
 kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key "ButtonsOnRight" "X"
@@ -91,6 +91,7 @@ wget "https://raw.githubusercontent.com/catppuccin/fish/refs/heads/main/themes/C
 cp ./config/config.fish ~/.config/fish
 fish -c "yes | fish_config theme save \"Catppuccin Mocha\""
 
+cp ./config/krunnerrc ~/.config
 cp ./config/mimemaps.list ~/.config
 
 mkdir -p ~/dev/work
