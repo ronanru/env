@@ -1,5 +1,5 @@
 if status is-interactive
-    set -Ux ANDROID_HOME "~/Android/sdk"
+    set -Ux ANDROID_HOME ~/Android/sdk
     fish_add_path ~/Android/sdk/platform-tools
     fish_add_path ~/Android/sdk/build-tools
     fish_add_path ~/.bun/bin
