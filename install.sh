@@ -9,7 +9,7 @@ curl -fsSL "https://copr.fedorainfracloud.org/coprs/scottames/ghostty/repo/fedor
 rpm-ostree refresh-md
 rpm-ostree install ghostty
 
-brew install gh ripgrep eza bat node ffmpeg yt-dlp tokei btop lazygit difftastic tlrc static-web-server sst/tap/opencode pnpm
+brew install gh ripgrep eza bat node ffmpeg yt-dlp tokei btop lazygit difftastic tlrc static-web-server sst/tap/opencode pnpm fd
 
 curl -fsSL https://bun.sh/install | bash
 
