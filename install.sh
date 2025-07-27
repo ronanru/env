@@ -91,6 +91,9 @@ cp ./config/tmux.conf ~/.tmux.conf
 mkdir -p ~/.config/fish/themes
 rm ~/.config/starship.toml
 starship preset nerd-font-symbols -o ~/.config/starship.toml
+starship config hostname.disabled true
+starship config username.disabled true
+
 wget "https://raw.githubusercontent.com/catppuccin/fish/refs/heads/main/themes/Catppuccin%20Mocha.theme" -O ~/.config/fish/themes/Catppuccin\ Mocha.theme
 cp ./config/config.fish ~/.config/fish
 fish -c "yes | fish_config theme save \"Catppuccin Mocha\""
