@@ -1,5 +1,5 @@
 font-family = Cascadia Code
-command = tmux
+command = tmux a || tmux
 confirm-close-surface = false
 gtk-titlebar = true
 gtk-titlebar-hide-when-maximized = true
