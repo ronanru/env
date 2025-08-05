@@ -6,3 +6,5 @@ gtk-titlebar-hide-when-maximized = true
 maximize = true
 window-decoration = client
 theme = catppuccin-mocha
+window-padding-balance = true
+window-padding-color = extend
