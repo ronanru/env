@@ -83,9 +83,6 @@ kwriteconfig6 --file ksmserverrc --group "General" --key "loginMode" "emptySessi
 mkdir -p ~/.config/ghostty
 cp ./config/ghostty ~/.config/ghostty/config
 
-rm -rf ~/.config/tmux/plugins/catppuccin
-mkdir -p ~/.config/tmux/plugins/catppuccin
-git clone --depth 1 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
 cp ./config/tmux.conf ~/.tmux.conf
 
 mkdir -p ~/.config/fish/themes
