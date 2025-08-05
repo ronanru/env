@@ -8,3 +8,4 @@ window-decoration = client
 theme = catppuccin-mocha
 window-padding-balance = true
 window-padding-color = extend
+font-size = 13
