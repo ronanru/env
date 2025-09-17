@@ -3,15 +3,12 @@ sudo -v
 
 sudo hostnamectl set-hostname matvey-pc
 
-# install ghostty
 . /etc/os-release
 curl -fsSL "https://copr.fedorainfracloud.org/coprs/scottames/ghostty/repo/fedora-${VERSION_ID}/scottames-ghostty-fedora-${VERSION_ID}.repo" | sudo tee /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:scottames:ghostty.repo >/dev/null
 rpm-ostree refresh-md
 rpm-ostree install ghostty
 
-brew install gh ripgrep eza bat node ffmpeg yt-dlp tokei btop lazygit difftastic tlrc static-web-server sst/tap/opencode pnpm fd
-
-curl -fsSL https://bun.sh/install | bash
+brew install gh ripgrep eza bat node ffmpeg yt-dlp tokei btop lazygit difftastic tlrc sst/tap/opencode pnpm fd tree-sitter-cli copyparty oven-sh/bun/bun
 
 flatpak install -y --noninteractive flathub com.obsproject.Studio org.chromium.Chromium org.libreoffice.LibreOffice io.mpv.Mpv com.google.AndroidStudio org.qbittorrent.qBittorrent org.signal.Signal com.system76.Popsicle com.valvesoftware.Steam
 
@@ -116,4 +113,4 @@ wget "https://raw.githubusercontent.com/ThePrimeagen/tmux-sessionizer/refs/heads
 cp ./config/tmux-sessionizer.conf ~/.config/tmux-sessionizer
 chmod +x ~/.local/bin/tmux-sessionizer
 
-~/.bun/bin/bun i -g @antfu/ni taze
+/home/linuxbrew/.linuxbrew/bin/bun i -g @antfu/ni taze
