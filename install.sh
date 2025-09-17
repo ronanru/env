@@ -73,7 +73,7 @@ kwriteconfig6 --file kxkbrc --group Layout --key "ResetOldOptions" "true"
 kwriteconfig6 --file kxkbrc --group Layout --key "Use" "true"
 kwriteconfig6 --file kxkbrc --group Layout --key "VariantList" ","
 
-kwriteconfig6 --file kdeglobals --group "KDE" --key "AnimationDurationFacto" "0"
+kwriteconfig6 --file kdeglobals --group "KDE" --key "AnimationDurationFactor" "0"
 kwriteconfig6 --file kdeglobals --group "General" --key "TerminalApplication" "ghostty"
 kwriteconfig6 --file kdeglobals --group "General" --key "TerminalService" "com.mitchellh.ghostty.desktop"
 
