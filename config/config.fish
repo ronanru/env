@@ -2,8 +2,6 @@ if status is-interactive
     set -Ux ANDROID_HOME ~/Android/sdk
     fish_add_path ~/Android/sdk/platform-tools
     fish_add_path ~/Android/sdk/build-tools
-    fish_add_path ~/.bun/bin
-    fish_add_path ~
 
     /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
 
@@ -16,6 +14,7 @@ if status is-interactive
     alias v="nvim"
     alias lg="lazygit"
     alias nu="taze -Il"
+    alias ns="nr start"
     alias nd="nr dev"
     alias nb="nr build"
     alias nde="na dedupe"

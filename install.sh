@@ -8,7 +8,7 @@ curl -fsSL "https://copr.fedorainfracloud.org/coprs/scottames/ghostty/repo/fedor
 rpm-ostree refresh-md
 rpm-ostree install ghostty
 
-brew install gh ripgrep eza bat node ffmpeg yt-dlp tokei btop lazygit difftastic tlrc sst/tap/opencode pnpm fd tree-sitter-cli copyparty oven-sh/bun/bun
+brew install gh ripgrep eza bat node ffmpeg yt-dlp tokei btop lazygit difftastic tlrc sst/tap/opencode pnpm fd copyparty oven-sh/bun/bun
 
 flatpak install -y --noninteractive flathub com.obsproject.Studio org.chromium.Chromium org.libreoffice.LibreOffice io.mpv.Mpv com.google.AndroidStudio org.qbittorrent.qBittorrent org.signal.Signal com.system76.Popsicle com.valvesoftware.Steam
 
@@ -114,3 +114,4 @@ cp ./config/tmux-sessionizer.conf ~/.config/tmux-sessionizer
 chmod +x ~/.local/bin/tmux-sessionizer
 
 /home/linuxbrew/.linuxbrew/bin/bun i -g @antfu/ni taze
+fish -c "/home/linuxbrew/.linuxbrew/bin/bun completions"
