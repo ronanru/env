@@ -8,6 +8,7 @@ WorkingDirectory=%h
 ExecStart=/home/linuxbrew/.linuxbrew/bin/opencode web --port 4096 --hostname 0.0.0.0
 Restart=on-failure
 RestartSec=5
+Environment="PATH=%h/Android/Sdk/platform-tools:%h/Android/Sdk/build-tools:%h/.bun/bin:/home/linuxbrew/.linuxbrew/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin"
 Environment=OPENCODE_SERVER_USERNAME=matvey
 Environment=OPENCODE_SERVER_PASSWORD={{OPENCODE_SERVER_PASSWORD}}
 
