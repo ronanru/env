@@ -11,6 +11,7 @@ RestartSec=5
 Environment="PATH=%h/Android/Sdk/platform-tools:%h/Android/Sdk/build-tools:%h/.bun/bin:/home/linuxbrew/.linuxbrew/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin"
 Environment=OPENCODE_SERVER_USERNAME=matvey
 Environment=OPENCODE_SERVER_PASSWORD={{OPENCODE_SERVER_PASSWORD}}
+Environment=OPENCODE_EXPERIMENTAL_OXFMT=true
 
 [Install]
 WantedBy=default.target
