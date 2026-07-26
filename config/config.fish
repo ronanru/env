@@ -1,10 +1,4 @@
 if status is-interactive
-    set -Ux ANDROID_HOME ~/Android/Sdk
-    fish_add_path ~/Android/Sdk/platform-tools
-    fish_add_path ~/Android/Sdk/build-tools
-    fish_add_path ~/.bun/bin
-    fish_add_path ~/.vite-plus/bin
-
     /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
 
     starship init fish | source
