@@ -95,6 +95,9 @@ echo -e "[AC][SuspendAndShutdown]\nAutoSuspendAction=0" >~/.config/powerdevilrc
 mkdir -p ~/.config/ghostty
 cp ./config/ghostty ~/.config/ghostty/config
 
+mkdir -p ~/.config/opencode
+cp ./config/opencode.json ~/.config/opencode/opencode.json
+
 cp ./config/tmux.conf ~/.tmux.conf
 
 mkdir -p ~/.config/fish/themes
