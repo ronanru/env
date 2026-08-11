@@ -107,12 +107,7 @@ rm ~/.config/starship.toml
 
 mkdir -p ~/.config/secrets
 if [[ ! -f ~/.config/secrets/opencode-password ]]; then
-  if [[ -f ~/.config/systemd/user/opencode-web.service ]]; then
-    OPENCODE_PASSWORD="$(grep -oP 'OPENCODE_SERVER_PASSWORD=\K.*' ~/.config/systemd/user/opencode-web.service)"
-  fi
-  if [[ -z "$OPENCODE_PASSWORD" ]]; then
-    OPENCODE_PASSWORD="$(openssl rand -base64 32)"
-  fi
+  OPENCODE_PASSWORD="$(openssl rand -base64 32)"
   printf 'OPENCODE_SERVER_PASSWORD=%s\n' "$OPENCODE_PASSWORD" >~/.config/secrets/opencode-password
   chmod 600 ~/.config/secrets/opencode-password
 fi
