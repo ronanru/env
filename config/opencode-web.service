@@ -10,7 +10,7 @@ Restart=on-failure
 RestartSec=5
 Environment="PATH=/home/linuxbrew/.linuxbrew/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin"
 Environment=OPENCODE_SERVER_USERNAME=matvey
-Environment=OPENCODE_SERVER_PASSWORD={{OPENCODE_SERVER_PASSWORD}}
+EnvironmentFile=%h/.config/secrets/opencode-password
 Environment=OPENCODE_EXPERIMENTAL_OXFMT=true
 
 [Install]
