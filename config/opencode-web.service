@@ -12,6 +12,7 @@ Environment="PATH=/home/linuxbrew/.linuxbrew/bin:/usr/local/sbin:/usr/local/bin:
 Environment=OPENCODE_SERVER_USERNAME=matvey
 EnvironmentFile=%h/.config/secrets/opencode-password
 Environment=OPENCODE_EXPERIMENTAL_OXFMT=true
+Environment=OPENCODE_ENABLE_EXA=1
 
 [Install]
 WantedBy=default.target

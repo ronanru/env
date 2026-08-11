@@ -1,14 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "lsp": true,
-  "mcp": {
-    "kagi": {
-      "type": "local",
-      "command": ["uvx", "kagimcp"],
-      "enabled": true,
-      "environment": {
-        "KAGI_API_KEY": "{file:~/.config/secrets/kagi-api-key}"
-      }
-    }
-  }
+  "lsp": true
 }
+
