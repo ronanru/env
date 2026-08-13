@@ -8,7 +8,7 @@ sudo -v
 
 sudo hostnamectl set-hostname matvey-pc
 
-brew install --quiet gh ripgrep eza bat node ffmpeg yt-dlp tokei btop lazygit difftastic tlrc opencode fd copyparty oven-sh/bun/bun neovim trash-cli taze ni vercel-cli starship tree-sitter-cli vite-plus
+brew install --quiet gh ripgrep eza bat node ffmpeg yt-dlp tokei btop lazygit difftastic tlrc opencode fd copyparty oven-sh/bun/bun neovim trash-cli taze ni vercel-cli starship tree-sitter-cli tpack fzf
 
 flatpak install -y --noninteractive --system flathub com.obsproject.Studio org.chromium.Chromium org.libreoffice.LibreOffice io.mpv.Mpv org.signal.Signal com.valvesoftware.Steam it.mijorus.gearlever
 
@@ -99,6 +99,7 @@ mkdir -p ~/.config/opencode
 cp ./config/opencode.json ~/.config/opencode/opencode.json
 
 cp ./config/tmux.conf ~/.tmux.conf
+tpack install
 
 mkdir -p ~/.config/fish/themes
 rm ~/.config/starship.toml
@@ -145,12 +146,6 @@ if [[ ! -d ~/.config/nvim ]] || [[ ! -f ~/.config/nvim/init.lua ]]; then
   cp ./config/nvim.lua ~/.config/nvim/lua/plugins
   sed -i 's/notify = false/notify = true/g' ~/.config/nvim/lua/config/lazy.lua
 fi
-
-mkdir -p ~/.local/bin
-mkdir -p ~/.config/tmux-sessionizer
-wget "https://raw.githubusercontent.com/ThePrimeagen/tmux-sessionizer/refs/heads/master/tmux-sessionizer" -O ~/.local/bin/tmux-sessionizer
-cp ./config/tmux-sessionizer.conf ~/.config/tmux-sessionizer
-chmod +x ~/.local/bin/tmux-sessionizer
 
 fish -c "/home/linuxbrew/.linuxbrew/bin/bun completions"
 /var/home/linuxbrew/.linuxbrew/bin/nr --completion-fish >~/.config/fish/completions/nr.fish
