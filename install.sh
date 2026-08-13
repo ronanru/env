@@ -93,13 +93,13 @@ kwriteconfig6 --file PlasmaUserFeedback --group "Global" --key "FeedbackLevel" "
 echo -e "[AC][SuspendAndShutdown]\nAutoSuspendAction=0" >~/.config/powerdevilrc
 
 mkdir -p ~/.config/ghostty
-ln --symbolic ./config/ghostty ~/.config/ghostty/config
+cp ./config/ghostty ~/.config/ghostty/config
 
 mkdir -p ~/.config/opencode
 mkdir -p ~/.config/secrets
-ln --symbolic ./config/opencode.json ~/.config/opencode/opencode.json
+cp ./config/opencode.json ~/.config/opencode/opencode.json
 
-ln --symbolic ./config/tmux.conf ~/.tmux.conf
+cp ./config/tmux.conf ~/.tmux.conf
 tpack install
 
 mkdir -p ~/.config/fish/themes
@@ -116,18 +116,18 @@ fi
 
 if [[ ! -f ~/.config/systemd/user/opencode-web.service ]]; then
   mkdir -p ~/.config/systemd/user
-  ln --symbolic ./config/opencode-web.service ~/.config/systemd/user/opencode-web.service
+  cp ./config/opencode-web.service ~/.config/systemd/user/opencode-web.service
   loginctl enable-linger "$USER"
   systemctl --user daemon-reload
   systemctl --user enable opencode-web
   systemctl --user start opencode-web
 else
-  ln --symbolic ./config/opencode-web.service ~/.config/systemd/user/opencode-web.service
+  cp ./config/opencode-web.service ~/.config/systemd/user/opencode-web.service
   systemctl --user daemon-reload
   systemctl --user restart opencode-web
 fi
 
-ln --symbolic ./config/config.fish ~/.config/fish/config.fish
+cp ./config/config.fish ~/.config/fish/config.fish
 fish -c "fish_config theme choose catppuccin-mocha --color-theme=dark"
 
 cp ./config/krunnerrc ~/.config
@@ -141,7 +141,7 @@ cp -r ./config/git ~/.config
 
 if [[ ! -d ~/.config/nvim ]] || [[ ! -f ~/.config/nvim/init.lua ]]; then
   echo "Setting up neovim configuration..."
-  
+  cp -r ./config/nvim ~/.config
 fi
 
 fish -c "/home/linuxbrew/.linuxbrew/bin/bun completions"
