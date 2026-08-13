@@ -93,12 +93,13 @@ kwriteconfig6 --file PlasmaUserFeedback --group "Global" --key "FeedbackLevel" "
 echo -e "[AC][SuspendAndShutdown]\nAutoSuspendAction=0" >~/.config/powerdevilrc
 
 mkdir -p ~/.config/ghostty
-cp ./config/ghostty ~/.config/ghostty/config
+ln --symbolic ./config/ghostty ~/.config/ghostty/config
 
 mkdir -p ~/.config/opencode
-cp ./config/opencode.json ~/.config/opencode/opencode.json
+mkdir -p ~/.config/secrets
+ln --symbolic ./config/opencode.json ~/.config/opencode/opencode.json
 
-cp ./config/tmux.conf ~/.tmux.conf
+ln --symbolic ./config/tmux.conf ~/.tmux.conf
 tpack install
 
 mkdir -p ~/.config/fish/themes
@@ -115,18 +116,18 @@ fi
 
 if [[ ! -f ~/.config/systemd/user/opencode-web.service ]]; then
   mkdir -p ~/.config/systemd/user
-  cp ./config/opencode-web.service ~/.config/systemd/user/opencode-web.service
+  ln --symbolic ./config/opencode-web.service ~/.config/systemd/user/opencode-web.service
   loginctl enable-linger "$USER"
   systemctl --user daemon-reload
   systemctl --user enable opencode-web
   systemctl --user start opencode-web
 else
-  cp ./config/opencode-web.service ~/.config/systemd/user/opencode-web.service
+  ln --symbolic ./config/opencode-web.service ~/.config/systemd/user/opencode-web.service
   systemctl --user daemon-reload
   systemctl --user restart opencode-web
 fi
 
-cp ./config/config.fish ~/.config/fish/config.fish
+ln --symbolic ./config/config.fish ~/.config/fish/config.fish
 fish -c "fish_config theme choose catppuccin-mocha --color-theme=dark"
 
 cp ./config/krunnerrc ~/.config
@@ -140,11 +141,7 @@ cp -r ./config/git ~/.config
 
 if [[ ! -d ~/.config/nvim ]] || [[ ! -f ~/.config/nvim/init.lua ]]; then
   echo "Setting up neovim configuration..."
-  rm -rf ~/.config/nvim
-  git clone --depth 1 https://github.com/LazyVim/starter ~/.config/nvim
-  rm -rf ~/.config/nvim/.git
-  cp ./config/nvim.lua ~/.config/nvim/lua/plugins
-  sed -i 's/notify = false/notify = true/g' ~/.config/nvim/lua/config/lazy.lua
+  
 fi
 
 fish -c "/home/linuxbrew/.linuxbrew/bin/bun completions"
