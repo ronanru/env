@@ -16,6 +16,7 @@ local plugins = {
 	"supermaven",
 	"treesitter",
 	"undotree",
+	"grug-far",
 }
 
 for _, plugin in ipairs(plugins) do
